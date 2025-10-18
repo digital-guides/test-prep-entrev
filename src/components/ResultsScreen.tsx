@@ -115,10 +115,12 @@ const ResultsScreen = ({ score, maxScore, onRestart }: ResultsScreenProps) => {
             <Button
               size="lg"
               className="flex-1 bg-gradient-accent hover:opacity-90 text-white py-6 text-lg font-semibold"
-              onClick={() => window.open("/Guia_Practica_para_Entrevistas_Exitosas.pdf", "_blank")}
+              asChild
             >
-              <FileText className="mr-2 w-5 h-5" />
-              Ver Guía práctica
+              <a href="/Guia_Practica_para_Entrevistas_Exitosas.pdf" target="_blank" rel="noopener noreferrer">
+                <FileText className="mr-2 w-5 h-5" />
+                Ver Guía práctica
+              </a>
             </Button>
           </div>
         </div>
