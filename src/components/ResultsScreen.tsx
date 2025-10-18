@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { RefreshCw, FileText } from "lucide-react";
+import { RefreshCw } from "lucide-react";
 
 interface ResultsScreenProps {
   score: number;
@@ -102,25 +102,15 @@ const ResultsScreen = ({ score, maxScore, onRestart }: ResultsScreenProps) => {
           </Card>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 pt-6">
+          <div className="flex justify-center pt-6">
             <Button
               onClick={onRestart}
               size="lg"
               variant="outline"
-              className="flex-1 py-6 text-lg font-semibold"
+              className="px-8 py-6 text-lg font-semibold"
             >
               <RefreshCw className="mr-2 w-5 h-5" />
               Repetir Test
-            </Button>
-            <Button
-              size="lg"
-              className="flex-1 bg-gradient-accent hover:opacity-90 text-white py-6 text-lg font-semibold"
-              asChild
-            >
-              <a href="/Guia_Practica_para_Entrevistas_Exitosas.pdf" target="_blank" rel="noopener noreferrer">
-                <FileText className="mr-2 w-5 h-5" />
-                Ver Guía práctica
-              </a>
             </Button>
           </div>
         </div>
